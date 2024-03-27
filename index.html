@@ -1,46 +1,193 @@
-<!doctype html>
-
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>HTML Example</title>
-  
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/about.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>통합검색 사이트</title>
+    <style>
+        @font-face {
+            font-family: 'font';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/TTLaundryGothicB.woff2') format('woff2');
+        }
+        .h1{
+            font-size: 60px;
+            font-family: 'font';
+            color: rgb(95, 239, 0);
+        }
+        .h2{
+            font-size: 40px;
+            font-family: 'font';
+            color: rgb(0, 0, 0);
+        }
+        .google{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(0, 119, 239);
+        }
+        .naver{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(95, 239, 0);
+        }
+        .riss{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(239, 179, 0);
+        }
+        .googleshcolar{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(239, 0, 0);
+        }
+        .seoul{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(0, 119, 239);
+        }
+        .korea{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(239, 0, 0);
+        }
+        .yonsei{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(38, 146, 255);
+        }
+        .namu{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(0, 239, 12);
+        }
+        .wiki{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(0, 0, 0);
+        }
+        .seouluniv{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(0, 119, 239);
+        }
+        .koreauniv{
+            font-size: 50px;
+            font-family: 'font';
+            color: rgb(239, 0, 0);
+        }
+        #all{
+            font-family: 'font';
+            height: 50px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            
+        }
+    </style>
 </head>
 <body>
-  <section class="center">
-    <aside class="sidebar"></aside>
-    
-    <section class="contents">
-      <!-- page will be include here -->
-      <section id="page" class="page">
-        <section id="about">
-          <section class="frame">
-            <h2><b>HELLO</b>WORLD</h2>
-            
-            <div class="cat">
-              <div class="picture">
-                <img src="images/mew.png" alt="Mew">
-              </div>
-              <small>Mew</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/siesta.png" alt="Siesta">
-              </div>
-              <small>Siesta</small>
-            </div>
-            <div class="cat">
-              <div class="picture">
-                <img src="images/tiger.png" alt="Tiger">
-              </div>
-              <small>Tiger</small>
-            </div>
-          </section>
-        </section>
-      </section>
-    </section>
-  </section>
+    <h1><div class="h1">통합검색 사이트</div></h1>
+    <h2><div class="h2"><br>검색엔진</div></h2>
+    <div class="google">
+        <form action="https://www.google.co.kr/search" method="get" target="_blank">
+            구글에서 검색하기 <input type="text" name="q" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="naver">
+        <form action="https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8" method="get" target="_blank">
+            네이버에서 검색하기 <input type="text" name="query" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <h2><div class="h2"><br>논문사이트</div></h2>
+    <div class="riss">
+        <form action="https://www.riss.kr/search/Search.do?colName=all&isDetailSearch=N&searchGubun=true&oldQuery=&sflag=1&fsearchMethod=search&isFDetailSearch=N&searchQuery=%E3%85%81%E3%84%B4%E3%85%87%E3%84%BB%E3%84%B4%E3%85%87%E3%84%BB%E3%84%B4%E3%85%87%E3%84%B9&kbid=&pageNumber=1" method="get" target="_blank">
+            riss에서 검색하기 <input type="text" name="query" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="googleshcolar">
+        <form action="https://scholar.google.com/scholar?hl=ko&as_sdt=0%2C5" method="get" target="_blank">
+            구글스콜러(구글논문)에서 검색하기 <input type="text" id="all" name="q" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <h2><div class="h2"><br>논문사이트(대학)</div></h2>
+    <div class="seoul">
+        <form action="https://lib.snu.ac.kr/search-result/" method="get" target="_blank">
+            서울대학교 중앙도서관에서 검색하기 <input type="text" name="q" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="korea">
+        <form action="https://library.korea.ac.kr/main-search-result/" method="get" target="_blank">
+            고려대학교 도서관에서 검색하기 <input type="text" name="q" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="yonsei">
+        <form action="https://library.yonsei.ac.kr/eds/brief/discoveryResult?st=KWRD&commandType=advanced&expander=relatedsubjects" method="get" target="_blank">
+            연세대학교 도서관에서 검색하기 <input type="text" name="q" id='all' placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <h2><div class="h2"><br>비전문사이트</div></h2>
+    <div class="namu">
+        <form action="https://namu.wiki/Search" method="get" target="_blank">
+            나무위키에서 검색하기 <input type="text" name="q" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="wiki">
+        <form action="https://ko.wikipedia.org/w/index.php" method="get" target="_blank">
+            위키피디아에서 검색하기 <input type="text" name="search" id="all" placeholder="검색해주세요">
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <h2><div class="h2"><br>대학별 추천서</div></h2>
+    <div class="seouluniv">
+        <form action="https://www.snupress.com/book/category" method="get" target="_blank">
+            서울대학교 필독서 <select name="cate1" id="all">
+                <option value="0">총류</option>
+                <option value="1">철학/심리학/윤리학</option>
+                <option value="2">종교</option>
+                <option value="3">사회과학</option>
+                <option value="4">순수과학</option>
+                <option value="5">기술과학</option>
+                <option value="6">예술</option>
+                <option value="7">어학</option>
+                <option value="8">문학</option>
+                <option value="9">역사/지리/관광</option>
+            </select>
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
+    <div class="koreauniv">
+        <form action="https://kupress.com/" method="get" target="_blank">
+            고려대학교 필독서 <select name="sector" id="all">
+                <option value="a총류">총류</option>
+                <option value="기술과학">기술과학</option>
+                <option value="d문학">문학</option>
+                <option value="g어학">어학</option>
+                <option value="j인문학">인문학</option>
+                <option value="m사회과학">사회과학</option>
+                <option value="p자연과학">자연과학</option>
+                <option value="s공학·의학">공학/의학</option>
+                <option value="z비국문도서">비국문도서</option>
+            </select>
+            <button type="submit" id="all">검색하기</button>
+            <script>var a=1;</script>
+        </form>
+    </div>
 </body>
 </html>
